@@ -7,6 +7,17 @@
     <title>Comparações complexas</title>
 </head>
 <body>
-    
+    <script>
+        var idioma=prompt("Por favor, digite o código do IDIOMA")
+        var variacao=prompt("Por favor, digite a variação")
+
+        if ((idioma == "pt") && (variacao == "pt" || variacao == "br")) {
+            alert ("Olá");
+        } else if ((idioma == "es" ) && (variacao == "us")) {
+            alert("Hi")
+        } else if((idioma == "es") && (variacao == "gb")) {
+            alert("Hello")
+        }
+    </script>
 </body>
 </html>
