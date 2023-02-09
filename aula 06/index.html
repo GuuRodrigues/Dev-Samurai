@@ -8,7 +8,28 @@
 </head>
 <body>
     <script>
-        
+
+        function soma(a, b) {
+            return a + b
+        }
+
+        function subtracao(a, b) {
+            return a - b
+        }
+
+        var n1 = Number(prompt("Número 1"))
+        var n2 = Number(prompt("Número 2"))
+        var opc = prompt("Operação")
+
+        var result 
+
+        if (opc == "+") {
+            result = soma(n1, n2)
+        } else if (opc == "-") {
+            result = subtracao(n1, n2)
+        }
+
+        alert(result)
     </script>
 </body>
 </html>
