@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados</title>
+</head>
+<body>
+    <script>
+        //Strings
+        console.log("Augusto")
+        console.log("Augusto Rodrigues")
+        console.log("Pavão - MG")
+        console.log("esc'ape") // Aspas viram strings
+
+        //Number
+        console.log(1)
+        console.log(1.2)
+        console.log(.12) // igual à 0.12
+
+        console.log(Math.PI) // Biblioteca MATH
+
+        //Boolean
+        console.log(true) // verdadeiro
+        console.log(false) // falso
+
+        //Infinity
+        console.log(Infinity) 
+        console.log(1 / 0)
+        console.log(typeof Infinity) // tipo numérico
+
+        //NaN
+        console.log(NaN)
+        console.log("A"/ 2)
+        console.log(typeof NaN) // tipo numérico
+
+        //Null and Undefined
+        console.log(null) // ausencia de valor
+        console.log(undefined) // indefinido
+        console.log(typeof null)
+
+        //Object
+        console.log({ propridade: "valor"})
+
+        console.log({
+            name: "Augusto",
+            age: "19",
+            address: {
+                public_place: "Travessa",
+                street: "Oriente",
+                neighborhood: "Centro",
+            },
+        })
+
+        //Array
+        console.log([1, 2, 3])
+        console.log([1, "A", "B", {nome: "Augusto", sobrenome: "Rodrigues"}])
+
+        //Date
+        console.log(Date()) // Data e hora corrente => new Date()
+        console.log(new Date()) // Data e hora corrente
+        console.log(new Date(2023, 1, 12)) //Data específica e hora corrente
+        console.log(new Date(2023, 1, 12, 14, 57)) // data e hora específica
+    </script>
+</body>
+</html>
