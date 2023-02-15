@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avançando nas variaveis</title>
+</head>
+<body>
+    <script>
+        //declaração assignment var / let
+
+        let x //undefined
+        console.log("x", x)
+
+        x = 10
+        console.log("x", x)
+
+        let y = 20 //declaração assignment var / let
+        console.log("y", y)
+
+        //Agrupamento de declarações
+
+        let name, age = 19, address = "Pavão - MG"
+        name = "Augusto"
+
+        console.log("name", name)
+        console.log("age", age)
+        console.log("address", address)
+
+        //Concatenação e interpolação
+        let nome, idade
+        nome = "Marcone"
+        idade = 52
+        endereco = {
+            street: "Travessa Oriente",
+            city: "Pavão"
+        }
+
+        console.log("Nome", nome)
+        console.log("Idade", idade)
+
+        //Concatenação (antigo)
+        console.log(nome + " tem " + idade + " anos e reside em" + JSON.stringify(endereco))
+
+        //Inteerpolação (nova)
+        console.log(`${nome} tem ${idade} anos e reside em ${JSON.stringify(endereco)}`)
+
+        //Object
+        const person = {
+            Nome: "Belinha",
+            Idade: 53,
+            Endereco: {
+                rua: "Sabatina sempre",
+                cidade: "T.O"
+            },
+        }
+
+        person.Nome = "Igor"
+        person.hair = "Black"
+
+        console.log(person)
+        console.log(person.Nome)
+        console.log(person.Idade)
+
+        
+        console.log(`${person.Nome} tem ${person.Idade} anos e reside na ${person.Endereco.cidade} na rua ${person.Endereco.rua}`)
+
+        //Array
+
+        //Variável + indice = array
+        const persons = ["Augusto", "Lara", "Djully"] 
+
+        //também se pode sobrescrever ou criar posição
+        persons[1] = "Belinha"
+
+        console.log(persons[0])
+        console.log(persons[1])
+        console.log(persons[2])
+
+        console.log(persons.length)  //Quantidade de nodos
+
+        //Date
+        
+        //new Date() //inicializa com a data e hora atual do pc
+       // new Date(yer, month, day, hours, minutes, seconds, milliseconds) // inicializa com valores pére-definidos
+        //new Date(dateString) //inicializa a partir de uma string
+
+        //const bornDate = new Date()
+        //const bornDate = new Date(2003, 5, 6)
+        const bornDate = new Date("Jun 6 2003")
+        const today = new Date()
+
+        console.log(bornDate)
+        console.log(bornDate.toISOString())
+
+        console.log("daia",bornDate.getDate())
+        console.log("Mês", bornDate.getMonth())
+        console.log("ano", bornDate.getFullYear())
+
+        console.log("idade", bornDate.getFullYear() - today.getFullYear())
+    </script>
+</body>
+</html> 
