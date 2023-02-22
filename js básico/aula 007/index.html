@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrutura de repetição</title>
+</head>
+<body>
+    <script>
+        //while
+
+        let i = 0
+        while(i < 10) {
+            console.log(`executando...${i + 1}`)
+            i++
+        }
+
+        console.log("Fim do programa")
+
+        //for
+
+        for(i=0; i<10; i++) {
+            console.log(`Contando "for" ${i+1}`)
+        }
+        console.log("Fim da repetição")
+
+        //for of
+        const nomes = ["Augusto", "Belinha", "Marcone", "Lara"]
+
+        /*for(let i=0; i<nomes.length; i++) {
+            console.log(nomes[i])
+        }*/
+
+        for (const nome of nomes) {
+            console.log(nome)
+        }
+
+        //for in
+        const person = {
+            name: "Augusto",
+            age: 19,
+            city: "Pavão",
+        }
+
+        for(const prop in person) {
+            console.log(`Prop: ${prop} - ${person[prop]}`)
+        }
+    </script>
+</body>
+</html>
