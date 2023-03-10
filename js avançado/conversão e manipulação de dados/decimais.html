@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = 1234.59
+
+        console.log(value.toFixed(1))
+        console.log(Math.ceil(value))
+        console.log(Math.floor(value))
+        console.log(Math.round(value))
+        console.log(
+            new Intl.NumberFormat("pt-br", {
+                style: "currency",
+                currency: "BRL",
+            }).format(value)
+
+        )
+
+        //contando dígitos
+        let name = "Augusto"
+        let num = 12345
+
+        console.log(name.length)
+        console.log(String(num).length)
+
+        //separando e juntando strings
+        let frase = "Eu sou um cara muito legal"
+
+        console.log(frase.split(" ").join("-"))
+
+        //maiusculas e minusculas
+        let txt = "Viver é maravilhoso"
+
+        console.log(txt.toLocaleLowerCase())
+        console.log(txt.toLocaleUpperCase()) //nivelar nomes no banco de dados
+
+        //Localizando strings
+
+        let str = "Eu sou um cara legal!"
+
+        console.log(str.includes("Augusto"))
+
+        //substituindo strings
+        let str2 = "Augusto é um cara legal"
+
+        console.log(str2.replace('Augusto', 'Marcone'))
+
+        let v2 = 1234.556 
+        console.log(v2.toFixed(2).replace(".", ","))//metodo antigo de internacionalização de números (SEM a API Intl)
+
+        //JSON - JavaScript Object Notation
+        //JSON.stringify
+        //JSON.parse()
+
+        const people = [
+            {
+                id: 1,
+                name: "Augusto",
+                lastName: "Rodrigues",
+                bornDate: new Date(2003, 5, 6),
+                address: {
+                    city: "Pavão",
+                },
+            },
+            {
+                id: 2,
+                name: "Djully",
+                lasName: "Vieira",
+                bornDate: new Date(2006, 0, 27),
+                address: {
+                    city: "Pavão",
+                },
+            },
+        ]
+        
+        console.log(JSON.stringify(people)) //obj <-> string
+
+        const json = '[{"id":1,"name":"Augusto","lastName":"Rodrigues","bornDate":"2003-06-06T03:00:00.000Z","address":{"city":"Pavão"}},{"id":2,"name":"Djully","lasName":"Vieira","bornDate":"2006-01-27T02:00:00.000Z","address":{"city":"Pavão"}}]'
+
+        console.log(JSON.parse(json))//string <-> objeto
+    </script>
+</body>
+</html>
