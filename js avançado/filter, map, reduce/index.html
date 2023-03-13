@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //filter
+        const numbers = [10, 18, 1, 15]
+
+        /*const gt10 = function(item) {
+            return item >= 10
+        }*/
+
+        let res = numbers.filter((item) => item > 10)
+        //let res = numbers.filter(gt10)
+        console.log(res)
+
+        people = [
+            {name : "Augusto", age:19, gender: "M"},
+            {name: "Belinha", age: 54, gender: "F"},
+            {name: "Marcone", age:53, gender: "M"},
+            {name: "Djully", age: 17, gender: "F"},
+        ]
+
+        const m = people.filter((p) => p.age >= 18)
+        const n = people.filter((p) => p.age >= 18 && p.gender === "M")
+        console.log(n)
+
+        //map
+        const numeros = [1, 2, 3, 4, 5]
+        const double = numeros.map((n) => n*n)
+        console.log(double)
+
+        const fahrenheit = [0, 32, 45, 46, 47, 91, 93, 121]
+        const celcius = fahrenheit.map((t) => Math.round(((t - 32) *5 ) /9 ))
+        console.log(celcius)
+
+        const peopleNormalized = people.map((p) => p.name.toUpperCase())
+        console.log(peopleNormalized)
+    </script>
+</body>
+</html>
