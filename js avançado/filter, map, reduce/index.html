@@ -41,6 +41,29 @@
 
         const peopleNormalized = people.map((p) => p.name.toUpperCase())
         console.log(peopleNormalized)
+
+        //reduce
+
+        let values = [10, 20, 30, 40, 50]
+
+        let total = values.reduce((acc, item) => {
+            return acc + item
+        })
+
+        console.log(total)
+
+        const palavras = ['oi', 'olaaaaar', 'paralelepipedo']
+
+        const maiorPalavra = palavras.reduce((maiorPalavra, palavraAtual) => {
+            if(palavraAtual.length > maiorPalavra.length) {
+                return palavraAtual
+            }
+
+            return maiorPalavra
+        },'');
+
+        console.log(maiorPalavra)
+
     </script>
 </body>
 </html>
