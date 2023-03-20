@@ -13,7 +13,7 @@
 </head>
 <body>
     <img src="foto.png" width="100">
-    <h1 id="Name">Augusto Rodrigues</h1>
+    <h1 id="Name">Seu Nome</h1>
     <h2>Programador JavaScript</h2>
 
     <p>Conhecimento em programação FrontEnd, Backend para desenvolvimento de sistemas fullstack</p>
@@ -22,9 +22,38 @@
     <script>
         //Documents --> Nodes --> Elements -- Atributes
         
-        console.log(document.body);
-        const titleEl = document.querySelector('#Name')
-        console.log(titleEl)
+        //console.log(document.body);
+        //const titleEl = document.querySelector('#Name')
+        //console.log(titleEl)
+
+        const name = document.querySelector("#Name")
+        console.log("name value:", name.innerHTML)
+
+        name.innerHTML = "Augusto Rodrigues"
+        name.style.color = "blue"
+
+        const subTitileEl = document.createElement("h2") 
+        subTitileEl.innerHTML = "Projetos"
+
+        const pjListEl = document.createElement("ul")
+
+        const pjListItem1 = document.createElement("li")
+        pjListItem1.innerHTML = "TODO MVC"
+        const pjListItem2 = document.createElement("li")
+        pjListItem2.innerHTML = "GitHub API"
+        const pjListItem3 = document.createElement("li")
+        pjListItem3.innerHTML = "eComerce"
+
+        pjListEl.appendChild(pjListItem1)
+        pjListEl.appendChild(pjListItem2)
+        pjListEl.appendChild(pjListItem3)
+
+        document.body.append(subTitileEl)
+        document.body.append(pjListEl)
+
+
+
+
     </script>
 </body>
 </html>
