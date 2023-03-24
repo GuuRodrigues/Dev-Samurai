@@ -21,6 +21,7 @@
 
     <button>Clique-me</button>
     <a href="https://devsamurai.com.br">Clique-me</a>
+    <input type="text">
 
     <script>
         //buttom click
@@ -35,6 +36,18 @@
             console.log("Voce clicou no link")
         })
 
+        //Keydown & Keyup
+        const inputEl = document.querySelector("input[type=text]")
+
+        inputEl.addEventListener("keydown", (event) => {
+            console.log("keydown", `${event.key} - ${event.keyCode}`)
+
+            if(event.keyCode === 13) {
+                alert(`Tecla ENTER pressionada - ${inputEl.value}`)
+            }
+        })
+
     </script>
+    
 </body>
 </html>

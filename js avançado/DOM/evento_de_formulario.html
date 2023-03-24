@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento de Formulário</title>
+    <style>
+        .highlight {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://google.com/search">
+        <label for="q">* Buscar</label>
+        <input type="text" name="q">
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <h1 id="title">título da página</h1>
+    <button id="change-color">Alterar cor</button>
+    <button id="change-class">Alterar classe</button>
+
+    <script>
+         const formEl = document.querySelector("form")
+
+         formEl.addEventListener("submit", (event) => {
+
+            const queryValue = event.target.querySelector("input[name=q]").value
+
+            console.log("queryValue", queryValue)
+
+            if(!queryValue) {
+                event.preventDefault()
+                alert("busca obrigatória")
+            }
+         })
+
+         const titleEl = document.querySelector("#title")
+         const buttonEl = document.querySelector("#change-color")
+         buttonEl.addEventListener("click", () =>{
+            titleEl.style = "color: blue; font-family: arial, sans-serif; font-size: 3em; text-decoration: underline; font-style: italic; font-weight: normal"
+         })
+
+         const button2El = document.querySelector("#change-class")
+         button2El.addEventListener("click", () =>{
+            /*if(titleEl.classList.contains("highlight")){
+                titleEl.classList.remove("highlight")
+            } else {
+                titleEl.classList.add("highlight")
+            }*/
+            titleEl.classList.toggle("highlight")
+         })
+    </script>
+</body>
+</html>
